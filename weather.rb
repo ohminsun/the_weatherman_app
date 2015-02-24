@@ -4,7 +4,7 @@ def get_weather(zipcode)
     temp = zipcode.to_i
     client = Weatherman::Client.new
     temp = client.lookup_by_location(zipcode).condition[temp]
-    return temp
+    return temp.to_i
 end
 
 def display_weather(temp)
@@ -30,6 +30,7 @@ puts "What is your zipcode?"
 zipcode = gets
 
 temp = get_weather(zipcode) 
+gets temp.to_i
 
 message = display_weather(temp)
 puts message 
