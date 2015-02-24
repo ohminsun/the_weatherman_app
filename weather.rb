@@ -3,8 +3,8 @@ require "yahoo_weatherman"
 def get_location(zipcode)
     temp = zipcode.to_i
     client = Weatherman::Client.new
-    response = client.lookup_by_location("zipcode").condition["temp"]
-return temp 
+    response = client.lookup_by_location(zipcode).condition["temp"]
+    return temp
 end
 
 def display_weather(temp)
