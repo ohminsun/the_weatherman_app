@@ -1,9 +1,9 @@
 require "yahoo_weatherman"
 
-def get_location(zipcode)
+def get_weather(zipcode)
     temp = zipcode.to_i
     client = Weatherman::Client.new
-    response = client.lookup_by_location(zipcode).condition["temp"]
+    temp = client.lookup_by_location(zipcode).condition[temp]
     return temp
 end
 
@@ -29,7 +29,7 @@ end
 puts "What is your zipcode?"
 zipcode = gets
 
-temp = get_location(zipcode) 
+temp = get_weather(zipcode) 
 
 message = display_weather(temp)
 puts message 
