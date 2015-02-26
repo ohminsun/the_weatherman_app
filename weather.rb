@@ -8,7 +8,7 @@ def get_weather(zipcode)
 end
 
 def display_weather(temp)
-    if temp >= 24
+    if temp > 24
         message = "It's hot out; drink lots of water to stay hydrated!"
     elsif temp >= 16 && temp < 24
         message = "I'd wear a jacket today and perhaps some sunglasses."
@@ -23,7 +23,7 @@ def display_weather(temp)
     elsif temp < -5
         message = "Okay, what are you even doing outside?  Stay in with a blanket and someone to cuddle with."
     else message = "I don't know what to recommend, sorry."
-    end 
+    end
 end
           
 puts "What is your zipcode?"
