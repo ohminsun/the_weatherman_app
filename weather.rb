@@ -20,8 +20,9 @@ def display_weather(temp)
         message = "Calling all down parkas, please find your nearest owner."
     elsif temp >= -5 && temp < 0
         message = "Time to retire to the South."
-    else temp < -5
+    elsif temp < -5
         message = "Okay, what are you even doing outside?  Stay in with a blanket and someone to cuddle with."
+    else message = "I don't know what to recommend, sorry."
     end 
 end
           
