@@ -33,4 +33,3 @@ gets temp.to_i
 
 message = display_weather(temp)
 puts message
-
